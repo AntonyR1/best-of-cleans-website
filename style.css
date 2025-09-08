@@ -1,21 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
 header {
-    background: #007BFF;
+    background: #007bff;
     color: #fff;
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 main {
@@ -24,28 +38,61 @@ main {
     margin: 0 auto;
 }
 
-.services-section, .contact-section {
+.section {
     background: #fff;
-    padding: 2rem;
+    padding: 3rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.services-section h2, .contact-section h2 {
-    color: #007BFF;
+.section h2 {
+    color: #007bff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-ul {
+.services-list {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
 }
 
-ul li {
+.services-list li {
     background: #e9ecef;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-left: 4px solid #007BFF;
+    flex-basis: calc(50% - 1rem);
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.price-box {
+    text-align: center;
+    background: #28a745;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.pricing-note {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
 }
 
 .button {
@@ -54,18 +101,28 @@ ul li {
     color: #fff;
     padding: 1rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
 }
 
 .button:hover {
     background: #218838;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background: #007bff;
+}
+
+.button-secondary:hover {
+    background: #0056b3;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
+    padding: 1.5rem;
+    background: #343a40;
+    color: #adb5bd;
     margin-top: 2rem;
 }
