@@ -3,259 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best of Cleans - Christchurch Commercial Cleaning1</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chosen Palette: Professional Blue & Clean Neutrals -->
-    <!-- Application Structure Plan: The application is designed as a conversion-focused landing page. The user flow is structured to build trust and provide value upfront. It begins with a hero section establishing credibility, followed by a section highlighting industry specializations (Medical, Dental, etc.) to resonate with target clients. The core is an interactive quote calculator that offers immediate, tangible value. This is supported by a "Why Choose Us" section for reinforcement, and concludes with a clear call-to-action—an integrated enquiry form. This structure was chosen to guide the user from initial interest to a qualified lead in a single, seamless experience. -->
-    <!-- Visualization & Content Choices: 
-        - Business Intro -> Goal: Inform/Trust -> Method: Hero section text with key stats -> Interaction: None -> Justification: Quickly establishes professionalism and core value propositions.
-        - Specializations -> Goal: Connect -> Method: Thematic cards with icons (HTML/Tailwind) -> Interaction: None -> Justification: Visually communicates expertise in target sectors, making the service feel more relevant to the viewer.
-        - Service List -> Goal: Engage/Inform -> Method: Interactive selectable cards -> Interaction: Click-to-select, visual state change -> Justification: Engages the user and allows them to customize their plan, feeding directly into the calculator.
-        - Quote Estimate -> Goal: Convert -> Method: Dynamic text display updated by JS -> Interaction: Real-time update based on user input -> Justification: Provides instant, personalized value, which is a powerful incentive for making contact.
-        - Enquiry Form -> Goal: Capture Lead -> Method: HTML form -> Interaction: On submit, JS constructs and opens a pre-filled mailto link -> Justification: A low-friction way to capture leads directly from the page without server-side code.
-        - Library/Method: Vanilla JavaScript for all logic. No charts needed.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
-        .service-card {
-            transition: all 0.2s ease-in-out;
-        }
-        .service-card.selected {
-            border-color: #2563eb;
-            background-color: #eff6ff;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-        .specialty-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-    </style>
+    <title>Best of Cleans</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+    <header>
+        <h1>Best of Cleans</h1>
+    </header>
 
-        <header class="text-center my-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600">Best of Cleans</h1>
-            <p class="mt-3 text-lg text-gray-600">Professional Cleaning for Christchurch Businesses</p>
-        </header>
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Vacuuming</li>
+                <li>Toilet Cleaning</li>
+                <li>Mopping</li>
+                <li>Dusting</li>
+                <li>Inside Window Cleaning</li>
+            </ul>
+        </section>
 
-        <main>
-            <section id="intro" class="max-w-4xl mx-auto text-center mb-16">
-                 
-                <h2 class="text-2xl font-bold mb-4">A Higher Standard of Clean for Your Workspace</h2>
-                <p class="text-gray-700 leading-relaxed">
-                    My name is Antony, owner of Best of Cleans. With over five years of dedicated experience, my team and I deliver reliable, high-quality cleaning services that create healthier and more productive environments for your staff and clients. We're proud to be a trusted partner for businesses across Christchurch.
-                </p>
-            </section>
-            
-            <section id="specialties" class="mb-16">
-                <div class="text-center mb-12">
-                     <h2 class="text-3xl font-bold text-gray-900">Specializing In Your Industry</h2>
-                     <p class="text-gray-600 mt-2">We understand the unique cleaning needs of different professional environments.</p>
-                </div>
-                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="specialty-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                        <div class="text-4xl mb-4">🏥</div>
-                        <h3 class="text-lg font-semibold">Medical Centers</h3>
-                    </div>
-                    <div class="specialty-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                        <div class="text-4xl mb-4">🦷</div>
-                        <h3 class="text-lg font-semibold">Dental Care</h3>
-                    </div>
-                    <div class="specialty-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                        <div class="text-4xl mb-4">🏢</div>
-                        <h3 class="text-lg font-semibold">Offices</h3>
-                    </div>
-                    <div class="specialty-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                        <div class="text-4xl mb-4">🏋️</div>
-                        <h3 class="text-lg font-semibold">Gyms</h3>
-                    </div>
-                </div>
-            </section>
+        <section id="clients">
+            <h2>Who We Serve</h2>
+            <ul>
+                <li>Medical Centres</li>
+                <li>Dental Care</li>
+                <li>Offices</li>
+                <li>Gyms</li>
+            </ul>
+        </section>
 
-            <section id="calculator" class="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-5xl mx-auto">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900">Instant Quote Estimator</h2>
-                    <p class="text-gray-600 mt-2">Our standard rate is a competitive <span class="font-semibold text-blue-600">$37 per hour</span>. See a weekly estimate below.</p>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                    
-                    <div id="service-selection">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">1. Choose Your Required Services</h3>
-                        <div id="services-container" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        </div>
-                    </div>
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>With over five years of professional cleaning experience in Christchurch, we provide reliable and high-quality service.</p>
+        </section>
 
-                    <div id="quote-details" class="bg-gray-100 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">2. Estimate Weekly Hours</h3>
-                        <div class="flex flex-col items-center">
-                            <label for="hours" class="font-medium text-gray-700">Estimated Cleaning Hours per Week</label>
-                            <input type="number" id="hours" min="1" value="5" class="mt-2 w-36 text-center text-3xl font-bold p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
+        <section id="enquire">
+            <h2>Enquire Now</h2>
+            <form action="send_email.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                        <div class="mt-8 text-center">
-                             <h3 class="text-xl font-semibold mb-2">3. Your Estimate</h3>
-                             <div class="bg-blue-600 text-white p-6 rounded-lg shadow-inner">
-                                <p class="text-lg">Estimated Weekly Cost</p>
-                                <p id="weekly-cost" class="text-4xl font-extrabold mb-2">$0.00</p>
-                                <p id="monthly-cost" class="text-blue-200">(approx. $0.00 / month)</p>
-                            </div>
-                            <p class="text-xs text-gray-500 mt-4">This is an estimate only. A final quote will be provided after a site visit.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
 
-            <section id="why-us" class="mt-16">
-                <div class="text-center mb-12">
-                     <h2 class="text-3xl font-bold text-gray-900">Why Partner with Best of Cleans?</h2>
-                </div>
-                <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-4xl mb-4">⭐</div>
-                        <h3 class="text-xl font-semibold mb-2">5+ Years of Experience</h3>
-                        <p class="text-gray-600">We bring years of expertise to ensure a consistently spotless finish for your professional space.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                         <div class="text-4xl mb-4">💰</div>
-                        <h3 class="text-xl font-semibold mb-2">Transparent Pricing</h3>
-                        <p class="text-gray-600">Simple, competitive rates at $37/hour with no hidden fees. Quality service that fits your budget.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                         <div class="text-4xl mb-4">📋</div>
-                        <h3 class="text-xl font-semibold mb-2">Meticulous Service</h3>
-                        <p class="text-gray-600">From dusting to disinfecting, we cover all your needs to maintain a pristine, healthy environment.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <footer id="contact" class="text-center mt-16 pt-12 border-t border-gray-200 bg-white rounded-lg shadow-xl p-8 max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold">Ready for a Cleaner Workspace?</h2>
-            <p class="text-gray-600 mt-2 mb-8 max-w-xl mx-auto">Contact me today for a free, no-obligation consultation and a precise quote tailored to your business needs.</p>
-            <div id="form-container">
-                 <form id="enquiry-form" class="space-y-4 text-left">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Tell us about your cleaning needs..."></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Send Enquiry
-                        </button>
-                    </div>
-                </form>
-            </div>
-             <div id="thank-you-message" class="hidden text-center p-8 bg-green-100 border border-green-200 rounded-lg">
-                <h3 class="text-2xl font-bold text-green-800">Thank You!</h3>
-                <p class="mt-2 text-green-700">Your email client should now be open. Please press send to deliver your enquiry to us.</p>
-            </div>
-        </footer>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
 
-    </div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const servicesData = [
-                { id: 'vacuuming', name: 'Vacuuming', icon: '💨' },
-                { id: 'mopping', name: 'Mopping', icon: '💧' },
-                { id: 'toilets', name: 'Toilet Cleaning', icon: '🚽' },
-                { id: 'dusting', name: 'Dusting', icon: '✨' },
-                { id: 'windows', name: 'Windows (Inside)', icon: '🪟' },
-                { id: 'bins', name: 'Bin Emptying', icon: '🗑️' }
-            ];
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
 
-            const servicesContainer = document.getElementById('services-container');
-            const hoursInput = document.getElementById('hours');
-            const weeklyCostEl = document.getElementById('weekly-cost');
-            const monthlyCostEl = document.getElementById('monthly-cost');
-            const enquiryForm = document.getElementById('enquiry-form');
-            const formContainer = document.getElementById('form-container');
-            const thankYouMessage = document.getElementById('thank-you-message');
+    <footer>
+        <p>Contact Antony: <a href="mailto:Antony.Rajan@bestofcleans.co.nz">Antony.Rajan@bestofcleans.co.nz</a></p>
+    </footer>
 
-            const HOURLY_RATE = 37;
-
-            const renderServices = () => {
-                servicesContainer.innerHTML = '';
-                servicesData.forEach(service => {
-                    const card = document.createElement('div');
-                    card.className = 'service-card cursor-pointer p-4 border-2 border-gray-200 rounded-lg text-center bg-white hover:border-blue-400';
-                    card.dataset.id = service.id;
-                    card.innerHTML = `
-                        <div class="text-3xl">${service.icon}</div>
-                        <div class="mt-2 font-medium text-sm">${service.name}</div>
-                    `;
-                    servicesContainer.appendChild(card);
-                });
-            };
-            
-            const calculateQuote = () => {
-                const hours = parseFloat(hoursInput.value) || 0;
-                const weeklyCost = hours * HOURLY_RATE;
-                const monthlyCost = weeklyCost * 4.33; 
-
-                weeklyCostEl.textContent = `$${weeklyCost.toFixed(2)}`;
-                monthlyCostEl.textContent = `(approx. $${monthlyCost.toFixed(2)} / month)`;
-            };
-            
-            enquiryForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
-                const targetEmail = 'Antony.Rajan@bestofcleans.co.nz';
-                const subject = `New Cleaning Enquiry from ${name} via Website`;
-                
-                let body = `A new enquiry has been submitted:\n\n`;
-                body += `Name: ${name}\n`;
-                body += `Email: ${email}\n`;
-                body += `Phone: ${phone || 'Not provided'}\n\n`;
-                body += `Message:\n${message}`;
-
-                const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                
-                formContainer.classList.add('hidden');
-                thankYouMessage.classList.remove('hidden');
-                
-                window.location.href = mailtoLink;
-            });
-
-
-            servicesContainer.addEventListener('click', (e) => {
-                const card = e.target.closest('.service-card');
-                if (card) {
-                    card.classList.toggle('selected');
-                }
-            });
-
-            hoursInput.addEventListener('input', calculateQuote);
-
-            renderServices();
-            calculateQuote();
-        });
-    </script>
 </body>
 </html>
