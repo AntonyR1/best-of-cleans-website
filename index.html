@@ -4,63 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best of Cleans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Best of Cleans</h1>
+        <div class="header-container">
+            <div class="logo">Best of Cleans</div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#experience">Experience</a>
+                <a href="#enquire" class="btn">Enquire Now</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Vacuuming</li>
-                <li>Toilet Cleaning</li>
-                <li>Mopping</li>
-                <li>Dusting</li>
-                <li>Inside Window Cleaning</li>
-            </ul>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Christchurch's Premier Office Cleaning Service</h1>
+                <p>Delivering impeccable cleaning with over 5 years of experience.</p>
+                <a href="#enquire" class="btn btn-primary">Get a Quote</a>
+            </div>
         </section>
 
-        <section id="clients">
-            <h2>Who We Serve</h2>
-            <ul>
-                <li>Medical Centres</li>
-                <li>Dental Care</li>
-                <li>Offices</li>
-                <li>Gyms</li>
-            </ul>
+        <section id="services" class="section-padded">
+            <h2>Our Professional Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Vacuuming</h3>
+                    <p>Thorough vacuuming of carpets and floors to remove all dust and debris.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Toilet Cleaning</h3>
+                    <p>Sanitizing and disinfecting restrooms for a hygienic and fresh environment.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Mopping</h3>
+                    <p>Wet and dry mopping of hard floors for a streak-free, polished finish.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Dusting</h3>
+                    <p>Detailed dusting of all surfaces, from desks to hard-to-reach corners.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Window Cleaning</h3>
+                    <p>Crystal-clear inside window cleaning for a brighter workspace.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <p>With over five years of professional cleaning experience in Christchurch, we provide reliable and high-quality service.</p>
+        <section id="clients" class="section-padded bg-light">
+            <h2>Trusted by Top Professionals</h2>
+            <div class="clients-list">
+                <span>Medical Centres</span>
+                <span>Dental Care</span>
+                <span>Offices</span>
+                <span>Gyms</span>
+            </div>
         </section>
 
-        <section id="enquire">
-            <h2>Enquire Now</h2>
-            <form action="send_email.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section id="experience" class="section-padded">
+            <h2>Over 5 Years of Experience</h2>
+            <p class="experience-text">
+                As Antony, the founder of Best of Cleans, I am dedicated to providing a superior cleaning service. Our team has built a reputation for reliability, attention to detail, and exceptional results.
+            </p>
+        </section>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Submit Enquiry</button>
-            </form>
+        <section id="enquire" class="section-padded bg-orange">
+            <h2>Get Your Free Quote</h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+            <div class="form-container">
+                <form action="send_email.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit" class="btn btn-white">Submit Enquiry</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Contact Antony: <a href="mailto:Antony.Rajan@bestofcleans.co.nz">Antony.Rajan@bestofcleans.co.nz</a></p>
+        <div class="footer-container">
+            <p>&copy; 2025 Best of Cleans. All Rights Reserved.</p>
+            <p>Contact: <a href="mailto:Antony.Rajan@bestofcleans.co.nz">Antony.Rajan@bestofcleans.co.nz</a></p>
+        </div>
     </footer>
 
 </body>
