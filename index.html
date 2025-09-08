@@ -3,47 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best of Cleans - Professional Cleaning Services</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Best of Cleans</title>
+    <style>
+        :root {
+            --orange-primary: #FF7F50; /* A vibrant orange */
+            --orange-secondary: #FFDAB9; /* A softer orange */
+            --white: #FFFFFF;
+            --black: #333333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--orange-primary);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .section {
+            background-color: var(--white);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: var(--orange-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--orange-secondary);
+            padding-bottom: 10px;
+        }
+
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .services-list li {
+            background-color: var(--orange-secondary);
+            color: var(--black);
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: var(--orange-primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--orange-primary);
+            color: var(--white);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="header-content">
-            <h1>Best of Cleans</h1>
-            <p>Exceptional Cleaning Services for Homes and Businesses</p>
-            <a href="#contact" class="button">Get a Free Estimate</a>
-        </div>
+        <h1>Best of Cleans</h1>
+        <p>Your Trusted Office Cleaning Partner in Christchurch</p>
     </header>
 
-    <main>
-        <section id="services" class="section">
-            <h2>Our Professional Services</h2>
-            <p>We provide a complete range of cleaning solutions tailored to your needs, ensuring a spotless and healthy environment.</p>
+    <div class="container">
+        <section class="section">
+            <h2>Our Experience</h2>
+            <p style="text-align: center; font-size: 1.1rem;">
+                With over five years of professional cleaning experience, we provide reliable and high-quality services to keep your workplace immaculate. We specialize in catering to a variety of commercial spaces.
+            </p>
+        </section>
+    
+        <section class="section">
+            <h2>Our Services</h2>
+            <p style="text-align: center;">We offer a comprehensive range of cleaning solutions tailored to your business needs.</p>
             <ul class="services-list">
-                <li>Residential & Move-In/Out Cleaning</li>
-                <li>Commercial & Office Maintenance</li>
-                <li>Deep & Seasonal Cleaning</li>
-                <li>Carpet & Upholstery Care</li>
+                <li>Vacuuming</li>
+                <li>Toilet Cleaning</li>
+                <li>Mopping</li>
+                <li>Dusting</li>
+                <li>Inside Window Cleaning</li>
             </ul>
         </section>
 
-        <section id="pricing" class="section">
-            <h2>Transparent Pricing</h2>
-            <p>Our commitment is to provide high-quality service at a fair and transparent price.</p>
-            <div class="price-box">
-                <span class="price">$37</span> per hour
+        <section class="section">
+            <h2>Clients We Serve</h2>
+            <p style="text-align: center;">We are proud to serve a diverse range of clients, ensuring a clean and professional environment for everyone.</p>
+            <ul class="services-list">
+                <li>Medical Centres</li>
+                <li>Dental Care Clinics</li>
+                <li>Offices</li>
+                <li>Gyms</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>Contact Us</h2>
+            <p style="text-align: center;">Ready to experience the Best of Cleans difference? Get in touch with me directly.</p>
+            <div class="contact-info" style="text-align: center;">
+                <p>Name: Antony</p>
+                <p>Email: <a href="mailto:Antony.Rajan@bestofcleans.co.nz">Antony.Rajan@bestofcleans.co.nz</a></p>
+                <p>Mobile: <a href="tel:0224118043">022 411 8043</a></p>
             </div>
-            <p class="pricing-note">
-                Our hourly rate is all-inclusive, with no hidden fees. Contact us for a custom quote based on your specific cleaning needs.
-            </p>
         </section>
-
-        <section id="contact" class="section">
-            <h2>Ready to Transform Your Space?</h2>
-            <p>Let us handle the cleaning so you can focus on what matters most. Contact us today to schedule your service.</p>
-            <a href="mailto:info@bestofcleans.com" class="button button-secondary">Email Us for a Quote</a>
-        </section>
-    </main>
+    </div>
 
     <footer>
         <p>&copy; 2025 Best of Cleans. All Rights Reserved.</p>
