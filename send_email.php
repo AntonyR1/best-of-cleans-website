@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers
-    $email_headers = "From: webmaster@yourdomain.co.nz\r\nReply-To: $email\r\n";
+    $email_headers = "From: webmaster@bestofcleans.co.nz\r\nReply-To: $email\r\n";
 
     // Send the email
     if (mail($recipient, $subject, $email_content, $email_headers)) {
